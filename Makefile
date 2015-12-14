@@ -6,7 +6,7 @@
 #    By: pollier <pollier@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/09/30 02:49:06 by pollier           #+#    #+#              #
-#    Updated: 2015/12/14 05:09:26 by pollier          ###   ########.fr        #
+#    Updated: 2015/12/14 05:47:15 by pollier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ db: re
 	lldb ./$(NAME)
 
 test: re
-	./$(NAME) -arRlt arg1 arg2 arg3 arg4 arg5
+	./$(NAME) -arRlt *
 
 val: re all
 	clear
