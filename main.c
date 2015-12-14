@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 03:57:05 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 06:25:07 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/14 08:25:48 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,11 @@ int					main(int argc, char const *argv[])
 	t_target		*targets;
 
 	options = ft_get_options(argc, argv);
-	targets = ft_get_targets(argc, argv);
-	process_targets(targets, options);
+	targets = ft_get_targets(argc, argv, options);
+	// if (!targets)
+	// {
+	// 	targets = ls_cur_dir(options);
+	// }
+	print_targets(targets, options);
 	return (0);
 }
