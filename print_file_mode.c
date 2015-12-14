@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 06:05:58 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 06:08:00 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/14 07:45:36 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ static void			print_rwx_user(struct stat *stats)
 	else
 	ft_putchar('-');
 }
+
 static void			print_rwx_group(struct stat *stats)
 {
 	if (stats->st_mode & S_IRGRP)
