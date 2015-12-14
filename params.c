@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 05:05:29 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 05:07:09 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/14 05:35:55 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void			ft_setopt(char const *opt, t_params *options)
 	}
 }
 
-static t_params		*ft_get_options(int argc, char const *argv[])
+t_params		*ft_get_options(int argc, char const *argv[])
 {
 	int			i;
 	t_params	*options;

@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 20:54:42 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 04:46:30 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/14 05:37:28 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,22 @@ typedef struct			s_target
 {
 	char				*name;
 	struct stat			*stats;
-	s_target			*next;
+	struct s_target		*next;
 }						t_target;
+
+enum					e_const
+{
+	ERROR_LSTAT
+};
+
 
 t_target			*ft_last_target(t_target *start);
 t_target			*ft_get_targets(int argc, char const *argv[]);
+t_params			*ft_get_options(int argc, char const *argv[]);
+void				ft_ls_error(int error_code);
+void				process_targets(t_target *target, t_params *options);
+
+
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 04:31:43 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 04:47:36 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/14 05:38:08 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ static t_target		*create_target(t_target *start, char const *name)
 	{
 		new = ft_memnew(sizeof(t_target));
 		new->name = ft_strdup(name);
+		new->stats = ft_memnew(sizeof(struct stat));
+		if (lstat(new->name, new->stats))
+			ft_ls_error(ERROR_LSTAT);
 	}
 	else
 	{
@@ -36,6 +39,9 @@ static t_target		*create_target(t_target *start, char const *name)
 		start = ft_last_target(start);
 		start->next = ft_memnew(sizeof(t_target));
 		start->next->name = ft_strdup(name);
+		start->next->stats = ft_memnew(sizeof(struct stat));
+		if (lstat(new->name, new->stats))
+			ft_ls_error(ERROR_LSTAT);
 	}
 	return (new);
 }
@@ -53,7 +59,7 @@ t_target			*ft_get_targets(int argc, char const *argv[])
 		{
 			if (argv[i][0] != '-')
 			{
-				start = create_target(start, argv[i);
+				start = create_target(start, argv[i]);
 			}
 			i++;
 		}
