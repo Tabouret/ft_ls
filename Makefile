@@ -6,14 +6,21 @@
 #    By: pollier <pollier@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/09/30 02:49:06 by pollier           #+#    #+#              #
-#    Updated: 2015/12/14 05:47:15 by pollier          ###   ########.fr        #
+#    Updated: 2015/12/14 06:26:02 by pollier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = clang
 LIBFT_PATH = libft/
 LIBFT = $(LIBFT_PATH)libft.a
-SOURCE = main.c process.c params.c target.c
+SOURCE =	main.c \
+			params.c \
+			print_file_mode.c \
+			print_l.c \
+			print_user_group.c \
+			process.c \
+			target.c
+
 FLAGS = -Wall -Wextra -Werror
 NAME = ft_ls
 

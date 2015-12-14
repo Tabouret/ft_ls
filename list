@@ -1,0 +1,12 @@
+Makefile
+ft_ls
+ft_ls.h
+libft
+list
+main.c
+params.c
+print_file_mode.c
+print_l.c
+print_user_group.c
+process.c
+target.c

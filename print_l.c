@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 05:55:46 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 06:13:20 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/14 07:25:55 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,15 +84,15 @@ static void			print_size_human(off_t size)
 	}
 	print_size(size);
 	if (i == 1)
-	ft_putstr('KiB');
+	ft_putstr("KiB");
 	else if (i == 2)
-	ft_putstr('MiB');
+	ft_putstr("MiB");
 	else if (i == 3)
-	ft_putstr('GiB');
+	ft_putstr("GiB");
 	else if (i == 4)
-	ft_putstr('TiB');
+	ft_putstr("TiB");
 	else if (i == 5)
-	ft_putstr('PiB');
+	ft_putstr("PiB");
 }
 
 static void			print_date(struct stat *stats)
@@ -108,15 +108,14 @@ static void			print_date(struct stat *stats)
 	}
 }
 
-void				ft_print_data_l(t_params options, struct stat *stats)
+void				ft_print_data_l(t_params *options, struct stat *stats)
 {
 	print_file_mode(stats);
 	ft_putchar('\t');
 	print_hard_link(stats->st_nlink);
 	ft_putchar('\t');
 	print_user_group(stats);
-	ft_putchar('\t');
-	if (meta->h_human)
+	if (options->h_human)
 		print_size_human(stats->st_size);
 	else
 		print_size(stats->st_size);

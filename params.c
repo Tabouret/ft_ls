@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 05:05:29 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 05:49:03 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/14 06:23:20 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void			ft_setopt(char const *opt, t_params *options)
 		else if (opt[i] == 'h')
 			options->h_human = 1;
 		else
-			ft_ls_error(ERROR_BAD_OPTION);
+			ft_ls_error(ERROR_BAD_OPTION, opt + i);
 		i++;
 	}
 }

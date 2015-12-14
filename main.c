@@ -6,18 +6,18 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 03:57:05 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 05:55:19 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/14 06:25:07 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-void				ft_ls_error(int error_code, void *opt)
+void				ft_ls_error(int error_code, const char *opt)
 {
 	if (error_code == ERROR_BAD_OPTION)
 	{
 		ft_putstr("./ft_ls: illegal option -- ");
-		ft_putchar(option);
+		ft_putstr((char*)opt);
 		ft_putchar('\n');
 		ft_putendl("usage: ./ft_ls: [-Ralrt]");
 	}

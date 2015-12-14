@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 06:05:58 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 06:11:17 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/14 07:26:57 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,4 @@ void				print_user_group(struct stat *stats)
 	print_user(stats);
 	ft_putchar('\t');
 	print_group(stats);
-	ft_putchar('\t');
 }
