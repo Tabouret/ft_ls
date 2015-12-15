@@ -6,7 +6,7 @@
 #    By: pollier <pollier@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/09/30 02:49:06 by pollier           #+#    #+#              #
-#    Updated: 2015/12/14 06:26:02 by pollier          ###   ########.fr        #
+#    Updated: 2015/12/15 12:53:27 by pollier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,4 +52,4 @@ val: re all
 
 re: fclean all
 
-.PHONY: all ft_ls clean fclean db test val re
+.PHONY: all clean fclean db test val re

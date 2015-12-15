@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 16:05:48 by pollier           #+#    #+#             */
-/*   Updated: 2015/11/11 02:22:52 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/15 13:07:03 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 void			ft_realloc(void **src, size_t n_length, size_t old_length);
 char			**ft_free_tab(char **tab);
-
 
 /*
 **	is
