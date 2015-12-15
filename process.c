@@ -6,16 +6,11 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 05:06:31 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 09:31:02 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/15 12:47:46 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
-
-// void		print_dir(target, options)
-// {
-//
-// }
 
 void		print_targets(t_target *target, t_params *options)
 {
@@ -31,7 +26,7 @@ void		print_targets(t_target *target, t_params *options)
 		{
 			ft_putstr(target->name);
 			print_targets(target->dir, options);
-	}
+		}
 		if (!options->r_rev)
 			print_targets(target->next, options);
 	}
