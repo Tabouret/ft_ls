@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 04:31:43 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/15 12:47:48 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/17 18:48:30 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static t_target		*target_is_dir(char const *name, t_params *options)
 		if (d->d_name[0] != '.' || options->a_dot)
 		{
 			tmp = to_path(name, d->d_name, d->d_namlen);
-			start = cte_tar(start, tmp, options, options->r_rec);
+			start = create_target(start, tmp, options, options->r_rec);
 			free(tmp);
 		}
 	}
@@ -64,7 +64,7 @@ static t_target		*target_is_dir(char const *name, t_params *options)
 	return (start);
 }
 
-t_target		*cte_tar(t_target *s, char const *n, t_params *o, int f)
+t_target		*create_target(t_target *s, char const *n, t_params *o, int f)
 {
 	t_target	*new;
 
@@ -93,7 +93,7 @@ t_target		*ft_get_targets(int argc, char const *argv[], t_params *options)
 		{
 			if (argv[i][0] != '-')
 			{
-				start = cte_tar(start, argv[i], options, 1);
+				start = create_target(start, argv[i], options, 1);
 			}
 			i++;
 		}

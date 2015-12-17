@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 05:05:29 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 06:23:20 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/17 18:37:35 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void			ft_setopt(char const *opt, t_params *options)
 {
 	size_t			i;
 
-	i = 0;
+	i = 1;
 	while (opt[i])
 	{
 		if (opt[i] == 'l')

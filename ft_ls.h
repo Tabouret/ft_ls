@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/05 20:54:42 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/15 12:54:38 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/17 18:48:30 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct			s_target
 
 enum					e_const
 {
+	NO_ERROR,
 	ERROR_LIST,
 	ERROR_LSTAT,
 	ERROR_BAD_OPTION
@@ -55,6 +56,6 @@ void		arg_debug(t_params *options);
 void		print_user_group(struct stat *stats);
 void		print_file_mode(struct stat *stats);
 void		ft_print_data_l(t_params *options, struct stat *stats);
-t_target	*cte_tar(t_target *s, char const *n, t_params *o, int f);
+t_target	*create_target(t_target *s, char const *n, t_params *o, int f);
 
 #endif

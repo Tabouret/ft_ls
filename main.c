@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 03:57:05 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/14 08:25:48 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/17 18:48:43 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ void				ft_ls_error(int error_code, const char *opt)
 		ft_putchar('\n');
 		ft_putendl("usage: ./ft_ls: [-Ralrt]");
 	}
+	else
+	{
 	ft_putstr("Erreur : ");
 	ft_putnbr(error_code);
 	ft_putchar('\n');
-	// exit(error_code);
+	ft_putchar('\n');
+	}
+	exit(error_code);
 }
 
 void				arg_debug(t_params *options)
@@ -51,10 +55,10 @@ int					main(int argc, char const *argv[])
 
 	options = ft_get_options(argc, argv);
 	targets = ft_get_targets(argc, argv, options);
-	// if (!targets)
-	// {
-	// 	targets = ls_cur_dir(options);
-	// }
+	if (!targets)
+	{
+		targets = create_target(NULL, ".", options, 1);
+	}
 	print_targets(targets, options);
 	return (0);
 }
