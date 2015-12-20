@@ -6,7 +6,7 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 05:06:31 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/17 18:50:55 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/20 17:09:20 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void		print_targets(t_target *target, t_params *options)
 		{
 			ft_print_data_l(options, target->stats);
 		}
-		if(!target->dir)
+		if (!target->dir)
 		{
 			print_filename(target->name);
 		}
