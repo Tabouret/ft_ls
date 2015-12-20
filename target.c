@@ -6,13 +6,13 @@
 /*   By: pollier <pollier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 04:31:43 by pollier           #+#    #+#             */
-/*   Updated: 2015/12/17 18:48:30 by pollier          ###   ########.fr       */
+/*   Updated: 2015/12/20 17:17:24 by pollier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-t_target			*ft_last_target(t_target *start)
+t_target		*ft_last_target(t_target *start)
 {
 	while (start && start->next)
 	{
@@ -21,7 +21,7 @@ t_target			*ft_last_target(t_target *start)
 	return (start);
 }
 
-char				*to_path(char const *prefix, char *suffix, size_t namelen)
+char			*to_path(char const *prefix, char *suffix, size_t namelen)
 {
 	char			**lol;
 	char			*retour;
@@ -39,7 +39,7 @@ char				*to_path(char const *prefix, char *suffix, size_t namelen)
 	return (retour);
 }
 
-static t_target		*target_is_dir(char const *name, t_params *options)
+static t_target	*target_is_dir(char const *name, t_params *options)
 {
 	struct dirent	*d;
 	DIR				*dir;
